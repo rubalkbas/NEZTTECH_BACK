@@ -1,5 +1,8 @@
 package com.nezttech.kanban.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.nezttech.kanban.entity.nztUsuarios;
 import com.nezttech.kanban.model.Respuesta;
 import com.nezttech.kanban.service.IEjemploService;
 
@@ -34,11 +38,12 @@ public class EjemploController {
 		LOGGER.info("EjemploController consultaEjemplo Entra");
 	
 		Respuesta response = new Respuesta();
-		String respuesta = "";
 		
-		respuesta = iEjemploService.consultaEjemplo();
+		List<nztUsuarios> usuarios = new ArrayList<nztUsuarios>();
 		
-		response.setValor(respuesta);
+		usuarios = iEjemploService.consultaEjemplo();
+		
+		response.setValor("tu mama es hombre");
 		response.setEstatus("ok");
 		response.setMensaje("Consulta exitosa - Sin datos en la bd");
 		

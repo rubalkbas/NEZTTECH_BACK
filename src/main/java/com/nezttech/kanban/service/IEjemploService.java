@@ -1,5 +1,9 @@
 package com.nezttech.kanban.service;
 
+import java.util.List;
+
+import com.nezttech.kanban.entity.nztUsuarios;
+
 /**
  * @author Nezttech
  *
@@ -11,6 +15,8 @@ public interface IEjemploService {
 	 * @author MTP
 	 * @return String String
 	 */
-	String consultaEjemplo()  ;
+	List<nztUsuarios> consultaEjemplo()  ;
+	
+	
 
 }

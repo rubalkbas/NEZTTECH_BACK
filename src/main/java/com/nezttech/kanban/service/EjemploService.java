@@ -1,8 +1,15 @@
 package com.nezttech.kanban.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.nezttech.kanban.entity.nztUsuarios;
+import com.nezttech.kanban.security.repository.EjemploRepository;
 
 /**
  * @author Nezttech
@@ -11,20 +18,27 @@ import org.springframework.stereotype.Service;
 @Service
 public class EjemploService implements IEjemploService{
 	
+	
+	@Autowired
+	private EjemploRepository  ejemploRepository;
+	
+	
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(EjemploService.class);
 	
 	@Override
-	public String consultaEjemplo(){
+	public List<nztUsuarios> consultaEjemplo(){
 		
 		LOGGER.info("EjemploService consultaEjemplo Entra");
 		
-		String respuesta="Prueba service";
+	
+		List<nztUsuarios> lista = new ArrayList<nztUsuarios>();
+		int ultimoRegistro;		
 		
-		//llamado de metodo de rpository
+		lista = ejemploRepository.findAll();
 		
-		LOGGER.info("EjemploService consultaEjemplo Sale");
-		
-		return respuesta;
+	
+		return lista;
 		
 	}
 
