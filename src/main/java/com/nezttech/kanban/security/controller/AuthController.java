@@ -21,5 +21,7 @@ import com.nezttech.kanban.security.jwt.JwtUtils;
 public class AuthController {
 	
 	
+	
+	
 
 }
