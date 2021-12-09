@@ -10,22 +10,19 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author Nezttech
- *
- */
+ * @author NezTTech
+ * @version 1.0
+ * @since   2021-12-01
+*/
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
 	
 	@Bean
     public Docket api() {
-                return new Docket(DocumentationType.SWAGGER_2)
-                            .select()
-                            .apis(
-                                    RequestHandlerSelectors
-                                    .basePackage("com.nezttech.kanban.controller"))
-                            .paths(PathSelectors.any())
-                            .build();
+		
+        return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("com.nezttech.kanban.controller"))
+                            .paths(PathSelectors.any()).build();
         }
 
 }
