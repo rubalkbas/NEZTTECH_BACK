@@ -19,9 +19,10 @@ import com.nezttech.kanban.model.Respuesta;
 import com.nezttech.kanban.service.IEjemploService;
 
 /**
- * @author Nezttech
- *
- */
+ * @author NezTTech
+ * @version 1.0
+ * @since   2021-12-01
+*/
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/ejemplo")

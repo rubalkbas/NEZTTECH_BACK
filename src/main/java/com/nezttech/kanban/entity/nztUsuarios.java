@@ -16,9 +16,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author rubal
- *
- */
+ * @author NezTTech
+ * @version 1.0
+ * @since   2021-12-01
+*/
 @Entity
 @Table(name = "nzt_usuarios", schema = "root" )
 @Getter
@@ -26,8 +27,6 @@ import lombok.Setter;
 public class nztUsuarios {
 	
 private static final long serialVersionUID = 1L;
-	
-	/** Retorna el estatus de la peticion o codigo*/
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
