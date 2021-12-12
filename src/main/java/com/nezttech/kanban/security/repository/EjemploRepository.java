@@ -19,13 +19,7 @@ import com.nezttech.kanban.entity.nztUsuarios;
 @Repository
 public interface EjemploRepository extends JpaRepository<nztUsuarios, Long> {
 	
-	@Query(value = "SELECT * \r\n" + 
-			"	FROM bdglobal.gbl_cat_cargo c \r\n" + 
-			"		where id_cargo not in(\r\n" + 
-			"        (SELECT a.id_cargo\r\n" + 
-			"			FROM bdglobal.gbl_usuario_comite  b  \r\n" + 
-			"			inner join bdglobal.gbl_cat_cargo a on  a.id_cargo = b.id_cargo\r\n" + 
-			"			and b.estatus = 1 where b.id_comite = :id_comite))", nativeQuery = true)
-	List<nztUsuarios> cargosSinSeleccionar(@Param("id_comite") int id_comite);
+	@Query(value = "SELECT * FROM nzt_usuarios", nativeQuery = true)
+	List<nztUsuarios> buscaTodo();
 
 }

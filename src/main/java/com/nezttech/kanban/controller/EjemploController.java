@@ -43,6 +43,7 @@ public class EjemploController {
 		
 		usuarios = iEjemploService.consultaEjemplo();
 		
+		response.setLista(usuarios);
 		response.setValor("tu mama es hombre");
 		response.setEstatus("ok");
 		response.setMensaje("Consulta exitosa - Sin datos en la bd");
