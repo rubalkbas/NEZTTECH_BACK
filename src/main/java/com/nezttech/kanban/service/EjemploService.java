@@ -33,7 +33,6 @@ public class EjemploService implements IEjemploService{
 		
 	
 		List<nztUsuarios> lista = new ArrayList<nztUsuarios>();
-		int ultimoRegistro;		
 		
 		lista = ejemploRepository.findAll();
 		
