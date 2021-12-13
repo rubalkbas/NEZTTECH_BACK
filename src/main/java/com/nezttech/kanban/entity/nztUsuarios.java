@@ -6,11 +6,17 @@ package com.nezttech.kanban.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,7 +25,7 @@ import lombok.Setter;
  *
  */
 @Entity
-@Table(name = "nzt_usuarios", schema = "root")
+@Table(name = "nzt_usuarios", schema = "kanban_db")
 @Getter
 @Setter
 public class nztUsuarios implements Serializable{
@@ -55,7 +61,7 @@ public class nztUsuarios implements Serializable{
 	private Date fchReg;
 	
 	@Column(name = "NUM_ESTATUS")
-	private Number estatus;
+	private Integer estatus;
 	
 	@Column(name = "TXT_USUARIO")
 	private String usuario;
@@ -77,5 +83,9 @@ public class nztUsuarios implements Serializable{
 	
 	@Column(name = "ID_ESTUDIOS")
 	private Integer idEstudios;
+
+
+
+	
 
 }

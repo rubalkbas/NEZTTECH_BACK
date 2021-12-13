@@ -37,7 +37,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable().
 		// dont authenticate this particular request
 		authorizeRequests().
-		antMatchers("/api/auth/**","/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**","/ws/**","/ejemplo/**"
+		antMatchers("/api/auth/**","/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**","/ws/**","/ejemplo/**","/pizarras/**"
 				).permitAll().
 		//antMatchers("/api/plantel/**").permitAll().
 		// all other requests need to be authenticated
