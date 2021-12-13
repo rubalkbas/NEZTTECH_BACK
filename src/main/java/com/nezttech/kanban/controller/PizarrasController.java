@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nezttech.kanban.entity.nztPizarraUsuariosUrlFoto;
 import com.nezttech.kanban.entity.nztUsuarioPizarra;
-import com.nezttech.kanban.entity.nztUsuarios;
 import com.nezttech.kanban.model.Respuesta;
 import com.nezttech.kanban.service.IEjemploService;
 import com.nezttech.kanban.service.IPizarraService;

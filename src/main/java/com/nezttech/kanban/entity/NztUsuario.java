@@ -6,38 +6,39 @@ package com.nezttech.kanban.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author rubal
- *
- */
+ * @author NezTTech
+ * @version 1.0
+ * @since   2021-12-01
+*/
 @Entity
 @Table(name = "nzt_usuarios", schema = "kanban_db")
 @Getter
 @Setter
-public class nztUsuarios implements Serializable{
+public class NztUsuario implements Serializable{
 
-	
 	private static final long serialVersionUID = 1L;
 	
 	/** Retorna el estatus de la peticion o codigo */
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "ID_USUARIO")
 	private Long idUsuario;
+	
+	@Column(name = "NOMBRE_USUARIO")
+	private String nombreUsuario;
 
 	@Column(name = "TXT_NOMBRE")
 	private String nombre;
@@ -61,7 +62,7 @@ public class nztUsuarios implements Serializable{
 	private Date fchReg;
 	
 	@Column(name = "NUM_ESTATUS")
-	private Integer estatus;
+	private int estatus;
 	
 	@Column(name = "TXT_USUARIO")
 	private String usuario;
@@ -72,17 +73,20 @@ public class nztUsuarios implements Serializable{
 	@Column(name = "TXT_URL_FOTO")
 	private String urlFoto;
 	
-	@Column(name = "NUM_ID_PUESTO")
-	private Integer idPuesto;
-	
 	@Column(name = "ID_PERFIL")
-	private Integer idPerfil;
+	private int idPerfil;	
 	
 	@Column(name = "FCH_CONTRATO")
 	private Date fchContrato;
 	
 	@Column(name = "ID_ESTUDIOS")
-	private Integer idEstudios;
+	private int idEstudios;
+	
+	@Column(name = "CORREO")
+	private String correo;
+	
+	@Column(name = "CONFIRMA_CORREO")
+	private int confirmaCorreo;
 
 
 

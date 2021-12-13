@@ -50,14 +50,14 @@ public class nztUsuarioPizarra {
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "ID_USUARIO")
-	private nztUsuarios usuarioDetalle;
+	private NztUsuario usuarioDetalle;
 
 	public nztUsuarioPizarra() {
 		
 	}
 	
 	public nztUsuarioPizarra(Long idUsuarioPízarra, String idPizarra, String fchAsignacion, String numStatus,
-			String txtTipoUsuario, nztUsuarios usuarioDetalle) {
+			String txtTipoUsuario, NztUsuario usuarioDetalle) {
 		super();
 		this.idUsuarioPízarra = idUsuarioPízarra;
 		this.idPizarra = idPizarra;

@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.nezttech.kanban.entity.nztPizarraUsuariosUrlFoto;
 import com.nezttech.kanban.entity.nztUsuarioPizarra;
-import com.nezttech.kanban.entity.nztUsuarios;
 
 /**
  * @author Ruben Vazquez
