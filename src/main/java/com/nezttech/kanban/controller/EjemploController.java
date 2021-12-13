@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nezttech.kanban.entity.nztUsuarios;
+import com.nezttech.kanban.entity.NztUsuario;
 import com.nezttech.kanban.model.Respuesta;
 import com.nezttech.kanban.service.IEjemploService;
 
@@ -40,7 +40,7 @@ public class EjemploController {
 	
 		Respuesta response = new Respuesta();
 		
-		List<nztUsuarios> usuarios = new ArrayList<nztUsuarios>();
+		List<NztUsuario> usuarios = new ArrayList<NztUsuario>();
 		
 		usuarios = iEjemploService.consultaEjemplo();
 		

@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.nezttech.kanban.entity.nztUsuarios;
+import com.nezttech.kanban.entity.NztUsuario;
 import com.nezttech.kanban.security.repository.EjemploRepository;
 
 /**
@@ -27,12 +27,12 @@ public class EjemploService implements IEjemploService{
 	private static final Logger LOGGER = LoggerFactory.getLogger(EjemploService.class);
 	
 	@Override
-	public List<nztUsuarios> consultaEjemplo(){
+	public List<NztUsuario> consultaEjemplo(){
 		
 		LOGGER.info("EjemploService consultaEjemplo Entra");
 		
 	
-		List<nztUsuarios> lista = new ArrayList<nztUsuarios>();
+		List<NztUsuario> lista = new ArrayList<NztUsuario>();
 		
 		lista = ejemploRepository.findAll();
 		

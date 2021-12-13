@@ -2,7 +2,7 @@ package com.nezttech.kanban.service;
 
 import java.util.List;
 
-import com.nezttech.kanban.entity.nztUsuarios;
+import com.nezttech.kanban.entity.NztUsuario;
 
 /**
  * @author Nezttech
@@ -15,7 +15,7 @@ public interface IEjemploService {
 	 * @author MTP
 	 * @return String String
 	 */
-	List<nztUsuarios> consultaEjemplo()  ;
+	List<NztUsuario> consultaEjemplo()  ;
 	
 	
 
