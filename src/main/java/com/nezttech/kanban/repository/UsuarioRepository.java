@@ -1,4 +1,4 @@
-package com.nezttech.kanban.security.repository;
+package com.nezttech.kanban.repository;
 
 import java.util.Optional;
 

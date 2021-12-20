@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.nezttech.kanban.entity.NztUsuario;
-import com.nezttech.kanban.security.repository.UsuarioRepository;
+import com.nezttech.kanban.repository.UsuarioRepository;
 
 /**
  * @author NezTTech

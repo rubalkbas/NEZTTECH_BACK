@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.nezttech.kanban.security.repository;
+package com.nezttech.kanban.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

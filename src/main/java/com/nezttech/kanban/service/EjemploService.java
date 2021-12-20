@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.nezttech.kanban.entity.NztUsuario;
-import com.nezttech.kanban.security.repository.EjemploRepository;
+import com.nezttech.kanban.repository.EjemploRepository;
 
 /**
  * @author Nezttech

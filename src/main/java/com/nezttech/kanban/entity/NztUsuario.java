@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -26,6 +27,7 @@ import lombok.Setter;
 @Table(name = "nzt_usuarios", schema = "kanban_db")
 @Getter
 @Setter
+@NoArgsConstructor
 public class NztUsuario implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -88,8 +90,10 @@ public class NztUsuario implements Serializable{
 	@Column(name = "CONFIRMA_CORREO")
 	private int confirmaCorreo;
 
-
-
-	
+	public NztUsuario(String nombreUsuario, String correo, String pass) {
+		this.nombreUsuario = nombreUsuario;
+		this.correo = correo;
+		this.pass = pass;
+	}	
 
 }

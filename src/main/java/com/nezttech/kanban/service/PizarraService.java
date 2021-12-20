@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
 
 import com.nezttech.kanban.entity.nztPizarraUsuariosUrlFoto;
 import com.nezttech.kanban.entity.nztUsuarioPizarra;
-import com.nezttech.kanban.security.repository.DetallePizarraUsuario;
-import com.nezttech.kanban.security.repository.PizarraUsuarioFotoRepository;
+import com.nezttech.kanban.repository.DetallePizarraUsuario;
+import com.nezttech.kanban.repository.PizarraUsuarioFotoRepository;
 
 
 /**
