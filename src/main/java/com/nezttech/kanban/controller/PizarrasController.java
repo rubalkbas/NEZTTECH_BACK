@@ -27,7 +27,7 @@ import com.nezttech.kanban.service.IPizarraService;
  * @author rubal
  *
  */
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "**")
 @RestController
 @RequestMapping("/pizarras")
 public class PizarrasController {
