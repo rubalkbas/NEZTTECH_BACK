@@ -112,7 +112,7 @@ public class AuthController {
 		
 	}
 	
-	@PostMapping("/signup/registro")
+	@PostMapping("/registroUsuario")
 	public ResponseEntity<?> registerUserExterno( @Valid @RequestBody Parametros parametros ) throws MessagingException, IOException {
 		
 		Respuesta response = new Respuesta();
