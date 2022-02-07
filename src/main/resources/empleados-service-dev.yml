@@ -1,0 +1,34 @@
+spring:
+#---------------------------------------
+#Configuraciones de Spring Sleuth
+#---------------------------------------
+  sleuth:
+    sampler:
+      probability: 1.0
+      
+
+#---------------------------------------
+#Configuraciones de Spring Data JPA - Oracle
+#---------------------------------------
+#  datasource: 
+#    url: jdbc:oracle:thin:@107.119.168.173:1660:odmxgsr1
+#   username: deifgsrh
+#    password: GldMy#21TgdXz
+#    driver-class-oracle.jdbc.driver: OracleDriver
+#    dialect: org.hibernate.dialect.Oracle12cDialect
+#    initialization-mode: never
+#  jpa:
+#    hibernate:
+#      ddl-auto: none  #Solo para ambientes locales (al iniciar la app actualiza el esquema de la BD). Para ambientes posteriores se aconseja colocar: validate
+#---------------------------------------
+# Configuraciones de logger
+#---------------------------------------
+logging:
+  level: 
+    mx.santander.gsrh: DEBUG
+    mx.santander.arquitecturatecnica: INFO
+#---------------------------------------
+# Configuraciones personalizadas del microservicio
+#---------------------------------------
+empleados-service:
+  nombre-config: test

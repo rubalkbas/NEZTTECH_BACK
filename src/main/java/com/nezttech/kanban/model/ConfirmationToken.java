@@ -38,13 +38,14 @@ public class ConfirmationToken implements Serializable{
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="iID_TOKEN")
+    @Column(name="ID_TOKEN")
     private long tokenid;
 
     @Column(name="CONFIRMATION_TOKEN")
     private String confirmationToken;
 
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(name="CREATED_DATE")
     private Date createdDate;
 
     @OneToOne(targetEntity = NztUsuario.class, fetch = FetchType.EAGER)
