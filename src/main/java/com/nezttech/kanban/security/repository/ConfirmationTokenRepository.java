@@ -1,4 +1,4 @@
-package com.nezttech.kanban.repository;
+package com.nezttech.kanban.security.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -13,7 +13,7 @@ import com.nezttech.kanban.model.ConfirmationToken;
 */
 public interface ConfirmationTokenRepository extends JpaRepository<ConfirmationToken , Long> {
 	
-	@Query(value = "SELECT * FROM kanban_db.gen_aux_confirmacion_token where confirmation_token = :token", nativeQuery = true)
+	 @Query(value = "SELECT * FROM kanban_db.nzt_confirmacion_token where confirmation_token = :token", nativeQuery = true)
 	 ConfirmationToken findByConfirmationToken(@Param("token") String confirmationTokens);
 
 }

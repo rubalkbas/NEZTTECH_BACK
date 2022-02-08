@@ -17,6 +17,8 @@ import com.nezttech.kanban.entity.NztUsuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<NztUsuario, Long>{
 	
+	NztUsuario findByCorreoIgnoreCase(String correo);
+
 	@Query(value = "select * from kanban_db.nzt_usuarios WHERE  CORREO = :correo ", nativeQuery = true)
 	NztUsuario usuarioHabilitado(@Param("correo") String correo);
 	
