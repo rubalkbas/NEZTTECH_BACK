@@ -194,32 +194,32 @@ public class AuthController {
     }
 	
 	
-	@PostMapping("/confirmar-cuenta")
-    public void confirmUserAccount(@RequestParam("token")String confirmationToken,HttpServletResponse resp) throws IOException
-    {
-        ConfirmationToken token = new ConfirmationToken();
-        token = confirmationTokenRepository.findByConfirmationToken(confirmationToken);
-
-        if(token != null)
-        {
-        	NztUsuario user = usuarioRepository.findByCorreoIgnoreCase(token.getUsuarios().getCorreo());
-        			
-            user.setConfirmaCorreo(1);
-            usuarioRepository.save(user);
-            
-            String url = "http://localhost:4200/" +  "/sign-in";
-            //String url = "http://104.192.6.36:7070/eCommerceFront/#" +  "/sign-in";
-            resp.sendRedirect(url);
-            
-          //  modelAndView.setViewName("accountVerified");
-        }
-        else
-        {
-           // modelAndView.addObject("message","The link is invalid or broken!");
-            //modelAndView.setViewName("error");
-        }
-
-       
-    }
+//	@PostMapping("/confirmar-cuenta")
+//    public void confirmUserAccount(@RequestParam("token")String confirmationToken,HttpServletResponse resp) throws IOException
+//    {
+//        ConfirmationToken token = new ConfirmationToken();
+//        token = confirmationTokenRepository.findByConfirmationToken(confirmationToken);
+//
+//        if(token != null)
+//        {
+//        	NztUsuario user = usuarioRepository.findByCorreoIgnoreCase(token.getUsuarios().getCorreo());
+//        			
+//            user.setConfirmaCorreo(1);
+//            usuarioRepository.save(user);
+//            
+//            String url = "http://localhost:4200/" +  "/sign-in";
+//            //String url = "http://104.192.6.36:7070/eCommerceFront/#" +  "/sign-in";
+//            resp.sendRedirect(url);
+//            
+//          //  modelAndView.setViewName("accountVerified");
+//        }
+//        else
+//        {
+//           // modelAndView.addObject("message","The link is invalid or broken!");
+//            //modelAndView.setViewName("error");
+//        }
+//
+//       
+//    }
 
 }
