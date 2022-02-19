@@ -34,5 +34,8 @@ private static final long serialVersionUID = 1L;
     @NotBlank
     @Size(min = 6, max = 40)    
     private String pass;
+    
+    
+    private Long idPizarra;
 
 }

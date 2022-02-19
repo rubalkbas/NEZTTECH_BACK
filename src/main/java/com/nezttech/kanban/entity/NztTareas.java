@@ -52,7 +52,7 @@ public class NztTareas {
 	@Column(name = "ID_USUARIO_ASIGNADO")
 	private Long idUsuario;
 	
-	@Column(name = "ID_PIZARRA")
+	@Column(name = "ID_LISTA_PIZARRA")
 	private Long isPizarra;
 	
 	@Column(name = "TXT_PRIORIDAD")
@@ -60,6 +60,7 @@ public class NztTareas {
 	
 	@Column(name = "TXT_ESTATUS")
 	private String estatus;
+	
 	
 
 	

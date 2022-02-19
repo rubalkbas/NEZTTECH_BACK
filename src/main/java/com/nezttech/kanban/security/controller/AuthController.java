@@ -41,7 +41,7 @@ import com.nezttech.kanban.security.service.DetalleUsuarioImpl;
  * @version 1.0
  * @since   2021-12-01
 */
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:61079/", maxAge = 3600)
 @RestController
 @RequestMapping("/authentication")
 public class AuthController {
