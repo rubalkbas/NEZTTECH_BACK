@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nezttech.kanban.entity.NztUsuario;
@@ -31,9 +33,9 @@ import com.nezttech.kanban.model.ConfirmationToken;
 import com.nezttech.kanban.model.Parametros;
 import com.nezttech.kanban.model.Respuesta;
 import com.nezttech.kanban.payload.response.JwtResponse;
-import com.nezttech.kanban.repository.ConfirmationTokenRepository;
 import com.nezttech.kanban.repository.UsuarioRepository;
 import com.nezttech.kanban.security.jwt.JwtUtils;
+import com.nezttech.kanban.security.repository.ConfirmationTokenRepository;
 import com.nezttech.kanban.security.service.DetalleUsuarioImpl;
 
 /**
@@ -185,10 +187,39 @@ public class AuthController {
 
         // true = text/html
         helper.setText("Para confirmar su cuenta, haga clic aquí: "
-        		+ pathMicroServ + "/api/auth/confirmar-cuenta?token="+token , true);
+        		+ pathMicroServ + "/authentication/confirmar-cuenta?token="+token , true);
 
         javaMailSender.send(msg);
 
     }
+	
+	
+//	@PostMapping("/confirmar-cuenta")
+//    public void confirmUserAccount(@RequestParam("token")String confirmationToken,HttpServletResponse resp) throws IOException
+//    {
+//        ConfirmationToken token = new ConfirmationToken();
+//        token = confirmationTokenRepository.findByConfirmationToken(confirmationToken);
+//
+//        if(token != null)
+//        {
+//        	NztUsuario user = usuarioRepository.findByCorreoIgnoreCase(token.getUsuarios().getCorreo());
+//        			
+//            user.setConfirmaCorreo(1);
+//            usuarioRepository.save(user);
+//            
+//            String url = "http://localhost:4200/" +  "/sign-in";
+//            //String url = "http://104.192.6.36:7070/eCommerceFront/#" +  "/sign-in";
+//            resp.sendRedirect(url);
+//            
+//          //  modelAndView.setViewName("accountVerified");
+//        }
+//        else
+//        {
+//           // modelAndView.addObject("message","The link is invalid or broken!");
+//            //modelAndView.setViewName("error");
+//        }
+//
+//       
+//    }
 
 }
